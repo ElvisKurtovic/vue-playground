@@ -14,7 +14,8 @@
           <!-- add event listener to the button element -->
           <button @click="state.counter += 1" class="btn btn-primary m-2">Add 1</button>
           <p>The button has been clicked {{state.counter}} times.</p>
-          <p v-if="state.counter == 69">{{state.message}}</p>
+          <!-- <p v-if="state.counter == 69">{{state.image}}</p> -->
+          <img v-if="state.counter == 69" src="https://cdn.mmos.com/wp-content/uploads/2017/09/south-park-nice.jpg" alt="">
         </div>
         <div class="border p-1">
           <h5>Events Calling A Method</h5>
@@ -44,6 +45,7 @@ export default {
       //add property called "counter"
       counter: 0,
       message: "nice",
+      image: "https://cdn.mmos.com/wp-content/uploads/2017/09/south-park-nice.jpg",
       //add property called "greeting"
       greeting: "sup homie"
       //create a method called "greet"
