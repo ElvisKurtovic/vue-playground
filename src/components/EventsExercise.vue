@@ -14,6 +14,7 @@
           <!-- add event listener to the button element -->
           <button @click="state.counter += 1" class="btn btn-primary m-2">Add 1</button>
           <p>The button has been clicked {{state.counter}} times.</p>
+          <p v-if="state.counter == 69">{{state.message}}</p>
         </div>
         <div class="border p-1">
           <h5>Events Calling A Method</h5>
@@ -42,6 +43,7 @@ export default {
     const state = reactive({
       //add property called "counter"
       counter: 0,
+      message: "nice",
       //add property called "greeting"
       greeting: "sup homie"
       //create a method called "greet"
